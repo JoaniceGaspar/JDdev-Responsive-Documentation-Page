@@ -167,6 +167,7 @@ code span {
   background-color: #162f44;
   color: #8cb4ff;
   border-radius: 3px;
+  text-decoration: none;
 }
 
 .bold {
@@ -216,24 +217,29 @@ code span {
 
   #horizontal-navbar ul::before {
     content: "CSS Documentation";
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 15px 0;
-    font-weight: bold;
+    width: 100%;
     color: #d0d0d5;
     font-size: 1.7em;
+    font-weight: bold;
+    position: fixed;
+    margin-top: -160px;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
 
   #horizontal-navbar ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: -30px auto 0;
     overflow-y: scroll;
+    margin-top: 30px;
   }
 
   #horizontal-navbar a {
+    position: relative;
     margin: auto;
     justify-items: center;
     justify-content: center;
