@@ -75,12 +75,13 @@ body {
 
 #main-doc {
   position: absolute;
-  left: 305px;
+  left: 330px;
+  padding-bottom: 20px;
   max-width: 50%;
 }
 
 #main-doc,
-#navbar {
+#navbar, #footer {
   margin: 150px 2rem;
 }
 
@@ -169,6 +170,18 @@ article ul li {
   margin-bottom: 0.6rem;
 }
 
+#reference-link li {
+  list-style: none;
+}
+#reference-link {
+  text-decoration: none;
+  color: rgb(22, 47, 68);
+}
+
+#reference-link:hover {
+  color: rgb(22, 47, 68, 0.8);
+}
+
 mark {
   background-color: pink;
   color: #162f44;
@@ -197,10 +210,15 @@ code span {
   max-width: 200px;
   padding: 8px;
   margin-top: 30px;
-  background-color: #162f44;
+  background-color: rgba(22, 47, 68, 0.9);
   color: #8cb4ff;
   border-radius: 3px;
   text-decoration: none;
+}
+
+.button-link:hover{
+  background-color: #162f44;
+  color: #8cb4ff;
 }
 
 .bold {
@@ -218,8 +236,41 @@ code span {
   border-left: 3px solid #8cb4ff;
 }
 
-/*Media Query*/
 
+#footer-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-doc {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  padding: 50px 15px 5px;
+  background-color: #162f44;
+  position: absolute;
+  margin: 8700px 0 0;
+  
+}
+
+#footer-doc, #footer-doc a {
+  color: #d0d0d5;
+}
+
+#footer-doc a {
+  text-decoration: underline;
+}
+
+#address-doc {
+  width: 100%;
+  text-align: center;
+  padding: 1.5em 0;
+  font-size: 1.2rem;
+}
+
+
+
+/*Media Query*/
 @media only screen and (max-width: 740px) {
   #navbar {
     display: none;
@@ -234,15 +285,6 @@ code span {
     max-width: 90%;
     /*text-align: center;*/
   }
-  /*
-  .button-link {
-    margin: 20px auto 0;
-  }
-
-  .exemple-code {
-    text-align: left;
-  }
-  */
 
   #horizontal-navbar {
     width: 100%;
@@ -272,6 +314,20 @@ code span {
     overflow-y: scroll;
     margin-top: 30px;
   }
+
+  #footer-doc {
+  margin: 9300px 0 0;
+}
+
+/*
+  .button-link {
+    margin: 20px auto 0;
+  }
+
+  .exemple-code {
+    text-align: left;
+  }
+  */
 
   /* =====Scrollbar Style====*/
 
