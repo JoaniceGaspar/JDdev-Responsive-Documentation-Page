@@ -207,6 +207,17 @@ code span {
     position: absolute;
     left: 15px;
     margin: 230px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .button-link {
+    margin: 20px auto 0;
+  }
+
+  .exemple-code {
+    text-align: left;
   }
 
   #horizontal-navbar {
