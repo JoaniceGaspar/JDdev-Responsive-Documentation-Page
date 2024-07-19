@@ -13,7 +13,7 @@ body {
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #horizontal-navbar-div {
@@ -75,7 +75,8 @@ body {
 
 #main-doc {
   position: absolute;
-  left: 295px;
+  left: 305px;
+  max-width: 50%;
 }
 
 #main-doc,
@@ -83,45 +84,24 @@ body {
   margin: 150px 2rem;
 }
 
-header,
-h2 {
-  font-weight: bold;
-  color: #162f44;
-  font-size: 1.7em;
+#main-doc header,
+#navbar {
+ padding-bottom: 8px;
 }
 
-header:not(.main-header),
-h2 {
-  padding-top: 40px;
-}
-
-h3 {
-  font-weight: normal;
-  color: #162f44;
-}
-
-hr {
-  height: 0.1rem;
-  background-color: #8cb4ff;
-}
-
-code span {
+#navbar {
   display: block;
+  width: 300px;
+  position: fixed;
 }
 
 #header-navbar {
   text-align: left;
 }
 
-#navbar {
-  display: block;
-  width: 280px;
-  position: fixed;
-}
-
 #navbar ul {
   list-style-type: none;
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
@@ -158,6 +138,59 @@ code span {
   margin-left: 1.1rem;
 }
 
+header,
+h2 {
+  font-weight: bold;
+  color: #162f44;
+  font-size: 1.9em;
+}
+
+header:not(.main-header){
+  padding-top: 40px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+
+h3 {
+  font-weight: normal;
+  color: #162f44;
+}
+
+hr {
+  height: 0.1rem;
+  background-color: #8cb4ff;
+  margin-bottom: 15px;
+}
+
+article ul li {
+  margin-bottom: 0.6rem;
+}
+
+mark {
+  background-color: pink;
+  color: #162f44;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+code span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.code-space {
+  margin: 0.5rem 1rem;
+}
+
+.exemple-code {
+  display: block;
+  border-left: 3px solid #ff707f;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+}
+
 .button-link {
   display: flex;
   justify-content: center;
@@ -185,17 +218,6 @@ code span {
   border-left: 3px solid #8cb4ff;
 }
 
-.exemple-code {
-  display: block;
-  border-left: 3px solid #ff707f;
-  background-color: #f1f1f1;
-  padding: 0.5rem;
-}
-
-.code-space {
-  margin-left: 0.5rem;
-}
-
 /*Media Query*/
 
 @media only screen and (max-width: 740px) {
@@ -209,6 +231,7 @@ code span {
     margin: 230px auto;
     display: flex;
     flex-direction: column;
+    max-width: 90%;
     /*text-align: center;*/
   }
   /*
