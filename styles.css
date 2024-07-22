@@ -1,3 +1,6 @@
+
+/* Comment Code: Ctrl + K + C */
+
 html,
 body {
   box-sizing: border-box;
@@ -14,6 +17,29 @@ body {
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+
+.container-doc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#main-doc {
+  position: relative;
+  left: 330px;
+  padding-bottom: 15px;
+  max-width: 50%;
+}
+
+#main-doc,
+#navbar {
+  margin: 150px 2rem 5px;
+}
+
+#main-doc header,
+#navbar {
+ padding-bottom: 8px;
 }
 
 #horizontal-navbar-div {
@@ -71,24 +97,9 @@ body {
 /*Vertical Navigation Bar and Main*/
 #vertical-navbar-and-main-div {
   display: flex;
+  margin-bottom: 20px;
 }
 
-#main-doc {
-  position: absolute;
-  left: 330px;
-  padding-bottom: 20px;
-  max-width: 50%;
-}
-
-#main-doc,
-#navbar, #footer {
-  margin: 150px 2rem;
-}
-
-#main-doc header,
-#navbar {
- padding-bottom: 8px;
-}
 
 #navbar {
   display: block;
@@ -153,7 +164,6 @@ header:not(.main-header){
 h2 {
   font-size: 1.5em;
 }
-
 
 h3 {
   font-weight: normal;
@@ -240,16 +250,15 @@ code span {
 #footer-div {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 #footer-doc {
   display: flex;
   width: 100%;
   text-align: center;
-  padding: 50px 15px 5px;
+  padding: 5px 15px;
   background-color: #162f44;
-  position: absolute;
-  margin: 8700px 0 0;
 }
 
 #footer-doc, #footer-doc a {
@@ -263,11 +272,9 @@ code span {
 #address-doc {
   width: 100%;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1em 0;
   font-size: 1.2rem;
 }
-
-
 
 /*Media Query*/
 @media only screen and (max-width: 768px) {
@@ -276,14 +283,20 @@ code span {
   }
 
   #main-doc {
-    position: absolute;
+    position: relative;
     left: 15px;
-    margin: 230px auto;
+    margin: 230px auto 15px;
     display: flex;
     flex-direction: column;
     max-width: 90%;
-    /*text-align: center;*/
   }
+
+  #footer-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
 
   #horizontal-navbar {
     width: 100%;
@@ -314,52 +327,7 @@ code span {
     margin-top: 30px;
   }
 
-  #footer-doc {
-  margin: 9300px 0 0;
-}
-
-/*
-  .button-link {
-    margin: 20px auto 0;
-  }
-
-  .exemple-code {
-    text-align: left;
-  }
-  */
-
-  /* =====Scrollbar Style====*/
-
-  /* Removing Body Scrollbar*/
-  body::-webkit-scrollbar{
-    display: none;
-  }
-  
-  /* Width */
-#horizontal-navbar ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  display: none;
- /*background: #f1f1f1;*/ 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #d0d0d5; 
-}
-
-
   #horizontal-navbar a {
-    position: relative;
     margin: auto;
     justify-items: center;
     justify-content: center;
@@ -380,6 +348,34 @@ code span {
   #horizontal-navbar li:active,
   #horizontal-navbar li a:active {
     border-bottom: 2px solid #8cb4ff;
+  }
+
+  /* =====Scrollbar Style====*/
+  /* Removing Body Scrollbar*/
+  body::-webkit-scrollbar{
+    display: none;
+  }
+  
+    /* Width */
+  #horizontal-navbar ul::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    display: none;
+  /*background: #f1f1f1;*/ 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d0d0d5; 
   }
 }
 
